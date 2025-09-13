@@ -2,11 +2,11 @@ export default function BackgroundFX() {
     return (
         <div className="pointer-events-none fixed inset-0 -z-10">
             {/* Top radial accent */}
-            <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(99,102,241,0.12),transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(99,102,241,0.08),transparent_70%)] dark:bg-[radial-gradient(60%_50%_at_50%_0%,rgba(99,102,241,0.12),transparent_70%)]" />
 
             {/* Subtle grid overlay */}
             <svg
-                className="absolute inset-0 h-full w-full opacity-[0.18]"
+                className="absolute inset-0 h-full w-full opacity-[0.08] dark:opacity-[0.18]"
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <defs>
@@ -18,10 +18,10 @@ export default function BackgroundFX() {
             </svg>
 
             {/* Bottom radial accent */}
-            <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_100%,rgba(99,102,241,0.08),transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_100%,rgba(99,102,241,0.04),transparent_70%)] dark:bg-[radial-gradient(60%_50%_at_50%_100%,rgba(99,102,241,0.08),transparent_70%)]" />
 
             {/* Vignette */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-100/40 dark:to-slate-900/40" />
         </div>
     )
 }

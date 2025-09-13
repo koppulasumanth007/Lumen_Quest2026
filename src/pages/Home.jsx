@@ -27,7 +27,7 @@ function Hero() {
             Take control of your plans, automate billing, and grow with insights — all in one secure, modern platform.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 animate-fade-in-up" style={{ animationDelay: '220ms' }}>
-            <Button as={Link} to="/login" variant="primary" size="lg">Sign in as User</Button>
+            <Button as={Link} to="/user/login" variant="primary" size="lg">Sign in as User</Button>
             <Button as={Link} to="/admin/login" variant="secondary" size="lg">Sign in as Admin</Button>
           </div>
         </div>
@@ -183,7 +183,7 @@ function PlanCard({ name, price, audience, popular, cta, features }) {
         ))}
       </ul>
       <div className="mt-8">
-        <Button as={Link} to={popular ? "/register" : "/register"} variant={popular ? 'primary' : 'secondary'} className="w-full">{cta}</Button>
+        <Button as={Link} to={popular ? "/user/signup" : "/user/signup"} variant={popular ? 'primary' : 'secondary'} className="w-full">{cta}</Button>
       </div>
     </div>
   )
@@ -224,8 +224,8 @@ function FinalCTA() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Ready to Revolutionize Your Subscription Management?</h2>
           <p className="mt-3 text-slate-200">Join SubScribeFlow today and take control with powerful automation and insights.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Button as={Link} to="/register" variant="primary" size="lg">Sign Up Now</Button>
-            <Button as={Link} to="/login" variant="secondary" size="lg">Sign in as User</Button>
+            <Button as={Link} to="/user/signup" variant="primary" size="lg">Sign Up Now</Button>
+            <Button as={Link} to="/user/login" variant="secondary" size="lg">Sign in as User</Button>
           </div>
         </div>
       </div>
