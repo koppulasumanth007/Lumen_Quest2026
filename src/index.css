@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Base theme variables */
+:root {
+  --color-bg: #111827; /* slate-900 */
+  --color-card: #1F2937; /* slate-800 */
+  --color-text: #F9FAFB; /* slate-50 */
+  --color-muted: #D1D5DB; /* slate-300 */
+  --color-accent: #6366F1; /* indigo-500 */
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 700ms ease-out both; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+/* Card hover glow */
+.hover-glow:hover { box-shadow: 0 0 0 1px rgba(148,163,184,0.25), 0 12px 24px -14px rgba(0,0,0,0.5); }
+
