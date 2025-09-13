@@ -1,0 +1,3 @@
+// SubscriptionContext placeholder
+import { createContext } from 'react';
+export const SubscriptionContext = createContext(null);
